@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/design")
 public class DesignController {
-    @GetMapping("/all")
+    @GetMapping("/custom")
     public String showDesignForm(Model model) {
         log.info("Inside showDesign form method ");
         List<Ingredient> ingredients = Arrays.asList(
