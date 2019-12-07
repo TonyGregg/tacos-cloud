@@ -10,5 +10,14 @@ spring:
     userName: developer
     password: Thirra1401!
 
+logging:
+  level:
+    root: INFO
+    org.springframework.security: DEBUG
+
+taco:
+  orders:
+    pageSize: 10
+
 
 
