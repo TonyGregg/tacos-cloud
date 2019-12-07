@@ -16,36 +16,36 @@ import javax.sql.DataSource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
-    DataSource dataSource;
+//    @Autowired
+//    DataSource dataSource;
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication()
-//                .withUser("buzz")
-//                .password("infinity")
-//                .authorities("ROLE_USER")
-//              .and()
-//                  .withUser("woody")
-//                    .password("bullseye")
-//                    .authorities("ROLE_USER");
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+////        auth.inMemoryAuthentication()
+////                .withUser("buzz")
+////                .password("infinity")
+////                .authorities("ROLE_USER")
+////              .and()
+////                  .withUser("woody")
+////                    .password("bullseye")
+////                    .authorities("ROLE_USER");
+//
+////        auth.jdbcAuthentication()
+////                .dataSource(dataSource)
+////                .usersByUsernameQuery("select user_id, password, enabled from Users" +
+////                        "where user_id=?")
+////                .authoritiesByUsernameQuery(
+////                        "select user_id, authority from UserAuthorities " +
+////                                "where user_id = ?");
+//    }
 
-        auth.jdbcAuthentication()
-                .dataSource(dataSource)
-                .usersByUsernameQuery("select user_id, password, enabled from Users" +
-                        "where user_id=?")
-                .authoritiesByUsernameQuery(
-                        "select user_id, authority from UserAuthorities " +
-                                "where user_id = ?");
-    }
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/design","/orders")
-                    .hasRole("USER")
-                .antMatchers("/","/**").permitAll();
-
-    }
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http
+//                .authorizeRequests()
+//                .antMatchers("/design","/orders")
+//                    .hasRole("USER")
+//                .antMatchers("/","/**").permitAll();
+//
+//    }
 }
