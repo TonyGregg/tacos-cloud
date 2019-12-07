@@ -1,5 +1,6 @@
 package sla.tacoscloud.data;
 
+import java.util.Date;
 import java.util.List;
 // end::allButValidation[]
 import javax.validation.constraints.NotNull;
@@ -19,5 +20,7 @@ public class Taco {
   @Size(min=1, message="You must choose at least 1 ingredient")
   // tag::allButValidation[]
   private List<String> ingredients;
+  private Date createdAt;
+
 
 }
