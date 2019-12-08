@@ -17,7 +17,7 @@ logging:
 
 taco:
   orders:
-    pageSize: 10
+    pageSize: 18
 
 
 
