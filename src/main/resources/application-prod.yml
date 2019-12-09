@@ -1,0 +1,23 @@
+server:
+  port: 8443
+  ssl:
+    key-store: file:///c:/users/anton/mykeys.jks
+    key-store-password: letmein
+    key-password: letmein
+spring:
+  datasource:
+    url: jdbc:mysql://10.0.0.7:3306/healthapp
+    userName: developer
+    password: Thirra1401!
+
+logging:
+  level:
+    root: INFO
+    org.springframework.security: DEBUG
+
+taco:
+  orders:
+    pageSize: 25
+
+
+
